@@ -48,42 +48,42 @@
 // }
 //Самостоятельные задания ★
 //Задача А
-int[] numbers = { 4, 5, 3, 5, 4 };
-int sum = 0;
-foreach (int number in numbers)
-{
-    Console.WriteLine(number);
-    sum += number;
-}
-Console.WriteLine("Сумма:" + sum);
-//Задача Б
-// string[] days = { "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" };
-// foreach (string day in days)
+// int[] numbers = { 4, 5, 3, 5, 4 };
+// int sum = 0;
+// foreach (int number in numbers)
 // {
-//     Console.WriteLine(day + "!");
+//     Console.WriteLine(number);
+//     sum += number;
 // }
-//Индивидуальный вариант ★★
-Console.Write("Введите свою фамилию: ");
-string surname = Console.ReadLine()!.Trim();
-if (string.IsNullOrEmpty(surname)) {
-Console.WriteLine("Фамилия не введена. Завершение работы.");
-return;
-}
-Random rnd = new(surname.GetHashCode() + DateTime.Now.DayOfYear);
-var assigned = Enumerable.Range(1, 10)
-.OrderBy(_ => rnd.Next())
-.Take(2)
-.OrderBy(x => x)
-.ToList();
-Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
-//Вариант 8
+// Console.WriteLine("Сумма:" + sum);
+// //Задача Б
+// // string[] days = { "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" };
+// // foreach (string day in days)
+// // {
+// //     Console.WriteLine(day + "!");
+// // }
+// //Индивидуальный вариант ★★
+// Console.Write("Введите свою фамилию: ");
+// string surname = Console.ReadLine()!.Trim();
+// if (string.IsNullOrEmpty(surname)) {
+// Console.WriteLine("Фамилия не введена. Завершение работы.");
+// return;
+// }
+// Random rnd = new(surname.GetHashCode() + DateTime.Now.DayOfYear);
+// var assigned = Enumerable.Range(1, 10)
+// .OrderBy(_ => rnd.Next())
+// .Take(2)
+// .OrderBy(x => x)
+// .ToList();
+// Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
+// //Вариант 8
 string word = "Программирование";
 for (int i = word.Length - 1; i >= 0; i--)
 {
     Console.Write(word[i]);
 }
 Console.WriteLine();
-//Вариант 10
+// //Вариант 10
 string[] days = { "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" };
 int weekendCount = 0;
 foreach (string day in days)
